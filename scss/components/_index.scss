@@ -1,0 +1,112 @@
+.banner {
+  position: relative;
+  padding: 0;
+
+  img {
+    opacity: 80%;
+    width: 100%;
+  }
+
+  .centered {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+
+    @media screen and (max-width:768px){
+      top: 65%;
+    }
+
+    h1 {
+      color: #fff;
+
+      -webkit-animation: text-shadow-pop-bottom 0.6s both;
+      animation: text-shadow-pop-bottom 0.6s both;
+
+      @-webkit-keyframes text-shadow-pop-bottom {
+        0% {
+          text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555,
+            0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        100% {
+          text-shadow: 0 1px #555555, 0 2px #555555, 0 3px #555555,
+            0 4px #555555, 0 5px #555555, 0 6px #555555, 0 7px #555555,
+            0 8px #555555;
+          -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+        }
+      }
+      @keyframes text-shadow-pop-bottom {
+        0% {
+          text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555,
+            0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        100% {
+          text-shadow: 0 1px #555555, 0 2px #555555, 0 3px #555555,
+            0 4px #555555, 0 5px #555555, 0 6px #555555, 0 7px #555555,
+            0 8px #555555;
+          -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+        }
+      }
+    }
+  }
+}
+
+.about-me {
+  img {
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+
+    @media screen and (max-width: 768px) {
+      width: 60%;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+    padding-right: 5%;
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      line-height: 30px;
+      padding: 8%;
+    }
+  }
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  margin: 0 5% 5% 5%;
+  padding: 1%;
+  background-color: $thirdBgColor;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+
+  img {
+    padding: 5%;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 5%;
+  }
+}
+
+.btn-card {
+  @include btn-card;
+}
+
+.carrousel {
+  padding-bottom: 5%;
+}
